@@ -1,0 +1,40 @@
+<h1> Edit Company Record </h1>
+
+<%= form_with model: @record do |form| %>
+
+     <% if @record.errors.any? %>
+       <% @record.errors.full_messages.each do |message| %>
+        <p> <%= message %> </p>
+        <% end %>
+     <% end %>
+
+    <div>
+    <%= form.label :company_name %><br>
+    <%= form.text_field :company_name %>
+    </div>
+
+    <div>
+    <%= form.label :email_id %><br>
+    <%= form.email_field :email_id %>
+    </div>
+
+    <div>
+    <%= form.label :company_code %><br>
+    <%= form.text_field :company_code %>
+    </div>
+
+    <div>
+    <%= form.label :strength %><br>
+    <%= form.text_field :strength %>
+    </div>
+
+    <div>
+    <%= form.label :website %><br>
+    <%= form.text_field :website %>
+    </div>
+
+    <div>
+    <%= form.submit %>
+    </div>
+    <% end %>
+
